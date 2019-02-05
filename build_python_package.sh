@@ -36,7 +36,7 @@ if [[ $package_deps_file != "" ]] ; then
 	fi
 
 	pyvenv-3.5 newpackage-env
-	bash -c "source newpackage-env/bin/activate; pip install -r ${package_deps_file}; deactivate"
+	bash -c "source newpackage-env/bin/activate; pip install -r /build/${package_deps_file}; deactivate"
 	cp -r newpackage-env/lib/python3.5/site-packages/* python/lib/python3.5/site-packages/.
 fi
 
