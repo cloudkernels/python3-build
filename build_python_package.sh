@@ -20,7 +20,6 @@ if [[ ! -f /build/$package_name ]] ; then
 	exit 1;
 fi
 
-cd /tmp/rumprun-packages/python3
 mkdir -p python/lib
 cp -r build/pythondist/lib/python3.5 python/lib/.
 
