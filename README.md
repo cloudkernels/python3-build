@@ -58,5 +58,5 @@ requests
 Like before, we invoke our container:
 
 ```
-docker run --rm -v $(pwd):/build cloudkernels/python3-build requests.iso requests.py requirements.txt
+docker run --rm -v $(pwd):/build cloudkernels/python3-build requests.iso requests_main.py requirements.txt
 ```
