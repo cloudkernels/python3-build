@@ -4,5 +4,7 @@ RUN apt-get update
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -q -y python3.5-venv
 
 COPY build_python_package.sh /
+COPY rootfs /rootfs
+
 ENTRYPOINT ["/build_python_package.sh"]
 CMD []

@@ -39,8 +39,10 @@ if [[ $package_deps_file != "" ]] ; then
 	cp -r newpackage-env/lib/python3.5/site-packages/* python/lib/python3.5/site-packages/.
 fi
 
+mv python rootfs
+
 ### Generate the image
-genisoimage -l -r -o /build/$isoname python
+genisoimage -l -r -o /build/$isoname rootfs
 
 
 ### Copy the python unikernels
