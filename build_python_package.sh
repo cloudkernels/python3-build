@@ -39,8 +39,12 @@ if [[ $package_deps_file != "" ]] ; then
 	cp -r newpackage-env/lib/python3.5/site-packages/* python/lib/python3.5/site-packages/.
 fi
 
-mv python rootfs
+echo "Moving python into rootfs dir"
+mv python /build/rootfs
 
+cd /build
+
+echo "Generating the rootfs dir"
 ### Generate the image
 genisoimage -l -r -o /build/$isoname rootfs
 
